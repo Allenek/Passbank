@@ -1,0 +1,10 @@
+  {% include 'baseModal.html.twig' %}
+  <footer class="card-footer text-dark align-self-start bg-light sticky-bottom text-center ">
+  </footer>
+  {% block js %}
+    {% for item in JavaScriptFiles %}
+        <script src="{{ url }}{{ item }}" charset="utf-8"></script>
+    {% endfor %}
+  {% endblock %}
+  </body>
+</html>

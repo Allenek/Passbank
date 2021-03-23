@@ -1,0 +1,12 @@
+{% extends './baseShow.html.twig' %}
+{% block title %}{% endblock %}
+{% block thead %}{% endblock %}
+{% block content %}
+{% for row in data %}
+  <tr>
+      {% block tbody %}{% endblock %}
+  </tr>
+{% endfor %}
+{% endblock %}
+{% block tfoot %}
+{% endblock %}

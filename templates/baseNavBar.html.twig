@@ -1,0 +1,42 @@
+<header>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<nav class="navbar navbar-light bg-primary bg-light navbar-expand-md ">
+  <span style="font-size: 2em; color: Gray;" class="navbar-brand">
+    <strong>BIOD</strong>
+  </span>
+
+  <button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menubar"
+          aria-controls="mainmenu"
+          aria-expanded="false"
+          aria-label="Przełącznik nawigacji">
+  </button>
+
+  <div class="collapse navbar-collapse" id="menubar">
+    <ul class="navbar-nav">
+      {% if isLogin is defined %}
+        <li class="nav-item ">
+          <button
+                  class="btn btn-light add-button"
+                  data-url="konto-formularz/"
+                  data-toggle="modal"
+                  data-target="#modal" >Dodaj stronę
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{{url}}wyloguj/">Wyloguj się</a>
+        </li>
+      {% else %}
+        <li class="nav-item ">
+        <a class="nav-link"
+           id="NavBarRegister"
+           data-url="formularz-rejestracja/"
+           data-toggle="modal"
+           data-target="#modal">Rejestracja</a>
+        </li>
+      {% endif %}
+      <li class="nav-item dropdown">
+    </ul>
+</header>

@@ -1,0 +1,71 @@
+{% extends './baseForm.html.twig' %}
+{% block title %}{% endblock %}
+{% block action %}zarejestruj/{% endblock %}
+{% block submitName %}Register!{% endblock %}
+{% block form %}
+  <div class="form-group has-feedback">
+    <label for="login">Login</label>
+    <input type="text" class="form-control" id="login" name="login" placeholder="Wprowadź login"
+    data-minlength="2"
+    maxlength="20"
+    data-required-error="Pole wymagane"
+    data-minlength-error="Minimalna długość to 2 znaki"
+    data-maxlength-error="Maksymalna długość to 20 znaków"
+    required
+    />
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label>Imie</label>
+    <input type="text" name="Imie" class="form-control" id="Imie" placeholder="Wprowadź imię"
+    pattern="^\w+$"
+    data-minlength="2"
+    maxlength="20"
+    data-pattern-error="Nieprawidłowa wartość"
+    data-required-error="Pole wymagane"
+    data-minlength-error="Minimalna długość to 2 znaki"
+    data-maxlength-error="Maksymalna długość to 20 znaków"
+    required
+     />
+     <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label>Nazwisko</label>
+    <input type="text" name="Nazwisko" class="form-control" id="Nazwisko" placeholder="Wprowadź nazwisko"
+    pattern="^\w+$"
+    data-minlength="2"
+    maxlength="20"
+    data-pattern-error="Nieprawidłowa wartość"
+    data-required-error="Pole wymagane"
+    data-minlength-error="Minimalna długość to 2 znaki"
+    data-maxlength-error="Maksymalna długość to 20 znaków"
+    required
+    />
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label for="pwd">Hasło</label>
+    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Wprowadź hasło"
+    required
+    data-required-error="Pole wymagane"
+    />
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label for="pwd-confirm">Potwierdź hasło</label>
+    <input type="password" class="form-control" id="pwd-confirm" name="pwd-confirm" placeholder="Powtórz hasło"
+    data-match="#pwd"
+    data-match-error="pola różnią się od siebie"
+    required
+    data-required-error="Pole wymagane"
+    />
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="captcha-holder"></div>
+  <div class="alert alert-danger collapse" role="alert"></div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{
+    "description": "BIOD",
+    "version": "0.0.1",
+    "require": {
+        "kint-php/kint": "2.*",
+        "altorouter/altorouter": "^1.2",
+        "twig/twig": "^2.5",
+        "owasp/phprbac": "^2.0",
+        "legierski/aes": "^0.1.0"
+
+
+    },
+    "autoload": {
+        "psr-4": {
+    			   "": "class/",
+             "Config\\": "config/",
+             "Messages\\": "messages/"
+		    }
+    }
+
+
+
+}

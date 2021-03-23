@@ -1,0 +1,49 @@
+{% extends './baseTemplate.html.twig' %}
+{% block body %}
+<div class="container">
+<form action="{{url}}zaloguj/" role="form" data-toggle="validator"  id="logform" method="post">
+
+  <div class="form-group has-feedback">
+    <label for="login">Login</label>
+    <input type="text" class="form-control" id="login" name="login" placeholder="Wprowadź login"
+      required
+    />
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label for="password">Hasło</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Wprowadź hasło"
+      required
+
+    />
+    <div class="help-block with-errors"></div>
+  </div>
+
+    <div class="captcha-chat d-flex justify-content-center">
+      <div class="captcha-container media ">
+          <div class="media-body">
+          </div>
+          <div id="captcha">
+              <div class="controls">
+                  <input class="user-text btn-common" placeholder="Type here" type="text" />
+                  <button type="button" class="validate btn-common">
+                      <!-- this image should be converted into inline svg -->
+                      <img src="../img/enter_icon.png" alt=" icon">
+                  </button>
+                  <button type="button" class="refresh btn-common" submit="">
+                      <!-- this image should be converted into inline svg -->
+                      <img src="../img/refresh_icon.png" alt="refresh icon">
+                  </button>
+              </div>
+          </div>
+          <p class="wrong info">Wrong!, please try again.</p>
+      </div>
+  </div>
+
+  <div class="alert alert-danger collapse" role="alert"></div>
+  <button type="submit" class="btn btn-dark submit" disabled >Zaloguj</button>
+
+</form>
+
+{% endblock %}

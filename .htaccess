@@ -1,0 +1,10 @@
+#włączenie mod_rewrite
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php [NC,L]
+
+ErrorDocument 404 http://localhost:81/BIOD/404.html

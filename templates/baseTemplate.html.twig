@@ -1,0 +1,17 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% block css %}
+      {% for item in StyleSheetFiles %}
+          <link rel="stylesheet" href="{{ url }}{{ item }}">
+      {% endfor %}
+    {% endblock %}
+  </head>
+  <body>
+    {% include './baseNavBar.html.twig' %}
+    {% include './flashMessage.html.twig' %}
+    <div class="container">
+      {% block body %}{% endblock %}
+    </div>
+{% include './footer.html.twig' %}

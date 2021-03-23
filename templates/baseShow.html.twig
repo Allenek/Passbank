@@ -1,0 +1,24 @@
+{% extends './baseTemplate.html.twig' %}
+{% block body %}
+  <h1>{% block title %}{% endblock %}</h1>
+  <table class="table table-striped" id="datatables">
+    <thead class="thead-light">
+      <tr>
+        {% block thead %}{% endblock %}
+      </tr>
+    </thead>
+    <tbody>
+      {% block content %}
+      {% endblock %}
+    </tbody>
+    <tfoot>
+      <tr>
+        {% block tfoot %}{% endblock %}
+      </tr>
+    </tfoot>
+  </table>
+  <br/><br/>
+  {% block buttons %}
+
+{% endblock %}
+{% endblock %}

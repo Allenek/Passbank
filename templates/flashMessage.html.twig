@@ -1,0 +1,30 @@
+<!-- sprawdza ilosc bledow w tablicach sesji(success, warning,error)  -->
+<!-- length w tym przypadku zlicza ilosc w tabeli -->
+{% if success is defined and success|length > 0  %}
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {% for v in success %}
+      <p>{{v}}</p>
+      {% endfor %}
+  </div>
+{% endif %}
+
+{% if warning is defined and warning|length > 0 %}
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+    {% for v in warning %}
+    <p>{{v}}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if error is defined and error|length > 0  %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    
+    {% for v in error %}
+    <p>{{v}}</p>
+    {% endfor %}
+  </div>
+{% endif %}
